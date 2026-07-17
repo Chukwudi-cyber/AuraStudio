@@ -8,6 +8,9 @@ html{
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    
 }
 /* HERO SECTION  */
 .he{
@@ -21,6 +24,10 @@ body{
 
 .herocontent{
     width: 50%;
+}
+.heroimg img{
+    width: 100%;
+    
 }
 
 nav{
@@ -237,3 +244,78 @@ nav ul li a:hover{
     background: #96a6de;
     transform: translateY(-5px);
 }
+
+/* Phone responsiveness */
+@media (max-width:768px) {
+    .herocontent{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .herotext{
+        width: 100%;
+    }
+
+    .heroimg{
+        width: 100%;
+    }
+
+    .heroimg img{
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        display: block;
+    }
+
+    .herotext h2{
+        font-size: 40px;
+    }
+
+    .herotext p{
+        font-size: 18px;
+    }
+
+    .btn{
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    /* services */
+
+    .sercont{
+        grid-template-columns: 1fr;
+    }
+
+    .sercard{
+        width: 100%;
+    }
+
+    /* contact */
+
+    .cont form{
+        width: 100%;
+    }
+
+    .cont h2{
+        font-size: 35px;
+    }
+
+    footer{
+        text-align: center;
+        padding: 20px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
