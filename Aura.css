@@ -266,13 +266,23 @@ nav ul li a:hover{
     transform: translateY(-5px);
 }
 
-#msg{
+/* #msg{
     margin-top: 15px;
     font-weight: bold;
-}
+} */
 
 /* Phone responsiveness */
 @media (max-width:768px) {
+    nav{
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img{
+        padding: 0;
+        width: 45px;
+        height: 45px;
+    }
     .herocontent{
         flex-direction: column;
         text-align: center;
