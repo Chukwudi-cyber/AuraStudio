@@ -19,25 +19,46 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 40px 8%;
+    padding: 100px 8% 20px;
 }
 
 .herocontent{
     width: 50%;
+    padding-top: 80px;
 }
 .heroimg img{
     width: 100%;
-    
 }
 
+nav img{
+    width: 70px;
+    height: 70px;   
+}
 nav{
-    margin-bottom: 80px;
+    /* margin-bottom: 60px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 7%;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: #ebe9ee;
+    backdrop-filter: blur(10px);
+
 }
 
 nav ul{
     display: flex;
     list-style: none;
     gap: 30px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+   
 }
 
 nav ul li a{
@@ -243,6 +264,11 @@ nav ul li a:hover{
 #backToTop:hover{
     background: #96a6de;
     transform: translateY(-5px);
+}
+
+#msg{
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 /* Phone responsiveness */

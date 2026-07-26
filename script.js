@@ -20,3 +20,27 @@ button.onclick = function () {
 
     });
 };
+
+// const form = document.getElementById("contactForm");
+// const msg = document.getElementById("msg");
+
+// form. addEventListener("submit", function(e) {
+//     e.preventDefault();
+
+//     fetch(form.action, {
+//         method: "POST",
+//         body: new FormData(form),
+//         headers: {
+//             "Accept": "application/json"
+//         }
+//     })
+//     .then(() => {
+//         msg.innerHTML = "✅ Thank you! Your message has been sent.";
+//         msg.style.color = "green";
+//         form.reset();
+//     })
+//     .catch(() => {
+//         msg.innerHTML = "❌ Message not sent.";
+//         msg.style.color = "red";
+//     });
+// });
