@@ -21,13 +21,21 @@ button.onclick = function () {
     });
 };
 
-const form = document.getElementById("contactForm");
-
-form. addEventListener("submit", function (e) {
+form.addEventListerner("submit", function (e) {
     e.preventDefault();
 
-    alert("✅ Thank you! Your message has been sent successfully");
-    form.submit();
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+            Accept: "application/json"
+        }
+    })
+    .then (function () {
+        alert("✅ Thank you! Your message has been sent successfully.");
 
+    })
+    .catch(function () {
+        alert("❌ Message not sent.");
+    });
 });
-
