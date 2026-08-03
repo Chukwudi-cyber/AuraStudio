@@ -6,6 +6,9 @@
 html{
     scroll-behavior: smooth;
 }
+#hero, #about, #services, #contact{
+    scroll-margin-top: 100px;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
@@ -61,6 +64,16 @@ nav ul{
    
 }
 
+.ham{
+    display: none;
+    cursor: pointer;
+}
+
+.ham img{
+    width: 35px;
+    height: 35px;
+    display: block;
+}
 nav ul li a{
     text-decoration: none;
     color: #5d70b0;
@@ -273,6 +286,23 @@ nav ul li a:hover{
 
 /* Phone responsiveness */
 @media (max-width:768px) {
+    .ham{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul.active{
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background: #ebe9ee;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px 0;
+    }
     nav{
         padding: 0 10px;
         justify-content: space-between;
@@ -283,10 +313,15 @@ nav ul li a:hover{
         width: 45px;
         height: 45px;
     }
-    .herocontent{
+    /* .herocontent{
         flex-direction: column;
         text-align: center;
         gap: 40px;
+    } */
+
+    .herocontent{
+        width: 100%;
+        text-align: center;
     }
 
     .herotext{
@@ -341,9 +376,73 @@ nav ul li a:hover{
         text-align: center;
         padding: 20px;
     }
-
-    
 }
+
+/* @media (min-width: 769px) and (max-width: 1366px){
+    .ham{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul.active{
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background: #ebe9ee;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px 0;
+    }
+    nav{
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img{
+        padding: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    .he{
+        padding: 100px 5%;
+    }
+
+    .herocontent{
+        width: 60%;
+    }
+
+    .herotext h1{
+        font-size: 60px;
+    }
+
+    .herotext h2{
+        font-size: 28px;
+    }
+
+    .herotext p{
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .heroimg{
+        width: 90%;
+        max-width: 400px;
+        display: block;
+        margin: auto;
+    }
+
+    .sercont{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .cont form{
+        width: 80%;
+    }
+} */
 
 
 

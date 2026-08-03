@@ -21,12 +21,16 @@
         
             <img src="image/aura-favicon.png.jpeg" alt="">
 
-        <ul>
+        <ul id="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="ham" onclick="toggleMenu()">
+            <img src="image/icons8-hamburger-30 (1).png" alt="">
+        </div>
 
     </nav>
     
@@ -94,14 +98,16 @@
 
         <h2>Contact Us</h2>
 
-        <form action="https://formsubmit.co/kingslayerdark@gmail.com" method="POST">
+        <form action="https://formsubmit.co/okekechukwudi2001@gmail.com" method="POST" class="contact-form">
 
             <input type="text" name="name" placeholder=" Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit"> Send Message </button>
 
-            <input type="hidden" name="_next" value="https://aura-studio-719s.vercel.app/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="hidden" name="_next" value="http://aura-studio-719s.vercel.app/thankyou.html">
         </form>
 
      </section>

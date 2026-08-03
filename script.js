@@ -20,8 +20,8 @@ button.onclick = function () {
 
     });
 };
-
-form.addEventListerner("submit", function (e) {
+const form = document.querySelector(".contact-form");
+form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     fetch(form.action, {
@@ -33,9 +33,22 @@ form.addEventListerner("submit", function (e) {
     })
     .then (function () {
         alert("✅ Thank you! Your message has been sent successfully.");
+        form.reset();
 
     })
     .catch(function () {
         alert("❌ Message not sent.");
     });
 });
+
+function toggleMenu(){
+
+    document.getElementById("nav-links").classList.toggle("active");
+}
+
+    document.querySelectorAll("#nav-links a").forEach(link => {
+        link.addEventListener("click", ()=> {
+            
+            document.getElementById("nav-links").classList.remove("active");
+        });
+    });
